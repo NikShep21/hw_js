@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>business card</title>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="form-container">
+            <header class="header">
+                <div class="section-container">
+                    <h1 class="title-header">Конструктор визиток</h1>
+                    
+                </div>
+            </header>
+        
+            <main class="section-container">
+                <form action="#">
+                    <div class="fields-container"> 
+                        <div class="form-field">
+                            <label class="label-field" for="name-organisation">Наименование организации</label>
+                            <input class="input-form-field" type="text" id="name-organisation">
+                        </div>
+                        <div class="form-field">
+                            <label class="label-field" for="name-person">Фамилия, имя, отчество</label>
+                            <div class="input-with-config-container">
+                                <input class="input-form-field" type="text" id="name-person">
+                                <div class="button-group"></div>
+                                <div class="button-group"></div>
+                            </div>
+                            <div class="colors-container"></div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label class="label-field" for="post">Должность</label>
+                            <div class="input-with-config-container">
+                                <input class="input-form-field" type="text" id="post">
+                                <div class="options-container">
+                                    <div class="button-group">
+                                        <button class="option option-active">24px</button>
+                                        <button class="option">24px</button>
+                                    </div>
+                                    <div class="button-group">
+                                        <button class="option option-active">24px</button>
+                                        <button class="option">24px</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="colors-container"></div>
+                        </div>
+                        <div class="form-field">
+                            <label class="label-field" for="number">Телефон</label>
+                            <div class="numbers-container">
+                                <div class="number-item"> 
+                                    <input class="input-form-field" type="text" id="number">
+                                </div>
+                                <div class="add-number-container">
+                                    <div class="btn-add-number"></div>
+                                    <p class="text-add-nubmer">Добавить еще один телефон</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-field">
+                            <label class="label-field" for="email-">E-mail</label>
+                            <div class="input-with-checker-container">
+                                <input class="input-form-field" type="text" id="email">
+                                <div class="checker-container">
+                                    <input  type="checkbox" class="checker" id="email-checker">
+                                    <label for="email-checker" class="text-checker">Отображать</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="label-field" for="adress">Адрес</label>
+                            <div class="input-with-checker-container">
+                                <input class="input-form-field"  type="text" id="adress">
+                                <div class="checker-container">
+                                    <input  type="checkbox" class="checker" id="email-checker">
+                                    <label for="email-checker" class="text-checker">Отображать</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button class="submit-btn">
+                        Применить
+                    </button>
+                </form>
+            </main>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h1>sadsad</h1>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
