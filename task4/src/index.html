@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>business card</title>
 </head>
 <body>
@@ -18,73 +19,142 @@
             </header>
         
             <main class="section-container">
-                <form action="#">
+                <form class="form" action="#">
                     <div class="fields-container"> 
                         <div class="form-field">
                             <label class="label-field" for="name-organisation">Наименование организации</label>
-                            <input class="input-form-field" type="text" id="name-organisation">
+                            <input class="input-form-field" name="name-organisation" type="text" id="name-organisation">
                         </div>
                         <div class="form-field">
                             <label class="label-field" for="name-person">Фамилия, имя, отчество</label>
                             <div class="field-config-wrapper">
-                                <input class="input-form-field" type="text" id="name-person">
-                                <div class="config-options"></div>
-                                <div class="config-options"></div>
+                                <input class="input-form-field" name="name-person" type="text" id="name-person">
+                                <div class="config-container">
+                                    <div class="config">
+                                        <label>
+                                            <input type="radio" name="position-name" value="left" checked>
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_left</span>
+                                            </div>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="position-name" value="center">
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_center</span>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="position-name" value="right">
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_right</span>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="config">
+                                        <label>
+                                            <input type="radio" name="px-name" value="24" checked>
+                                            <span class="config-option">24px</span>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="px-name" value="26">
+                                            <span class="config-option">26px</span>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="px-name" value="28">
+                                            <span class="config-option">28px</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="config-colors"></div>
-                        </div>
+                            <div id="config-colors-for-name" class="config-colors"></div>
                         
                         <div class="form-field">
                             <label class="label-field" for="post">Должность</label>
                             <div class="field-config-wrapper">
-                                <input class="input-form-field" type="text" id="post">
-                                <div class="config-options">
-                                    <div class="config-group">
-                                        <button class="config-button option-active">24px</button>
-                                        <button class="config-button">24px</button>
+                                <input class="input-form-field" name="post" type="text" id="post">
+                                <div class="config-container">
+
+                                    <div class="config">
+                                        <label>
+                                            <input type="radio" name="position-post" value="left" checked>
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_left</span>
+                                            </div>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="position-post" value="center">
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_center</span>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="position-post" value="right">
+                                            <div class="config-option">
+                                                <span class="material-icons">format_align_right</span>
+                                            </div>
+                                        </label>
                                     </div>
-                                    <div class="config-group">
-                                        <button class="config-button option-active">24px</button>
-                                        <button class="config-button">24px</button>
+
+                                    <div class="config">
+                                        <label>
+                                            <input type="radio" name="px-post" value="14" checked>
+                                            <span class="config-option">14px</span>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="px-post" value="16">
+                                            <span class="config-option">16px</span>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="px-post" value="18">
+                                            <span class="config-option">18px</span>
+                                        </label>
                                     </div>
-                                </div>
+
+                        </div>
                             </div>
-                            <div class="config-colors"></div>
+                            <div id="config-colors-for-post" class="config-colors"></div>
                         </div>
                         <div class="form-field">
                             <label class="label-field" for="number">Телефон</label>
                             <div class="phone-list">
-                                <div class="phone-item"> 
-                                    <input class="input-form-field" type="text" id="number">
+                                <div class="phones-container"> 
+                                    <input class="input-form-field" type="tel" name="phones[]" id="number">
                                 </div>
-                                <div class="phone-add-wrapper">
-                                    <div class="phone-add-btn"></div>
+                                <button type="button" class="phone-add-btn">
+                                    <div class="phone-add-visual"></div>
                                     <p class="phone-add-text">Добавить еще один телефон</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label class="label-field" for="email">E-mail</label>
+                            <div class="input-with-toggle-container">
+                                <input class="input-form-field" name="email" type="email" id="email">
+                                <div class="toggle-container">
+                                    <input  type="checkbox" name="checkbox-email" class="toggle-checkbox" id="checkbox-email">
+                                    <label for="checkbox-email" class="toggle-label">Отображать</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-field">
-                            <label class="label-field" for="email-">E-mail</label>
+                            <label class="label-field" for="address">Адрес</label>
                             <div class="input-with-toggle-container">
-                                <input class="input-form-field" type="text" id="email">
+                                <input class="input-form-field" name="address"  id="address">
                                 <div class="toggle-container">
-                                    <input  type="checkbox" class="toggle-checkbox" id="email-checker">
-                                    <label for="email-checker" class="toggle-label">Отображать</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-field">
-                            <label class="label-field" for="adress">Адрес</label>
-                            <div class="input-with-toggle-container">
-                                <input class="input-form-field"  type="text" id="adress">
-                                <div class="toggle-container">
-                                    <input  type="checkbox" class="toggle-checkbox" id="email-checker">
-                                    <label for="email-checker" class="toggle-label">Отображать</label>
+                                    <input  type="checkbox" name="checkbox-address" class="toggle-checkbox" id="checkbox-address">
+                                    <label for="checkbox-address" class="toggle-label">Отображать</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="submit-btn">
+                    <button type='submit' class="submit-btn">
                         Применить
                     </button>
                 </form>
@@ -92,7 +162,16 @@
         </div>
         <div class="card-container">
             <div class="card">
-                <h1>sadsad</h1>
+                <p class="name-organisation"></p>
+                <h2 class="name-person">Здесь будет ваша визитка</h2>
+                <div class="post"></div>
+                <div class="card-info-wrapper">
+                    <div class="card-info">
+                        <p class="phone-number"></p>
+                        <p class="email"></p>
+                        <p class="address"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
