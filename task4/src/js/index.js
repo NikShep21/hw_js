@@ -83,32 +83,30 @@ function createCard(e){
     console.log(data);
     cardOrganisation.textContent = data.nameOrganisation ?? '';
 
-    // Имя + стили
-        // ----------- Организация ----------
     cardOrganisation.textContent = data.nameOrganisation ?? '';
 
-    // ----------- Имя ----------
+
     cardPerson.textContent = data.namePerson ?? '';
     cardPerson.style.textAlign = data.positionName;
     cardPerson.style.fontSize = data.pxName + 'px';
     cardPerson.style.color = data.colorForName;
 
-    // ----------- Должность ----------
+
     cardPost.textContent = data.post ?? '';
     cardPost.style.textAlign = data.positionPost;
     cardPost.style.fontSize = data.pxPost + 'px';
     cardPost.style.color = data.colorForPost;
 
-    // ----------- Телефоны ----------
+
     cardPhone.innerHTML = data.phones
     .filter(p => p.trim() !== '')
     .map(p => `<p>${p}</p>`)
     .join('');
 
-    // ----------- Email ----------
+
     cardEmail.textContent = data.isEmail ? data.email : '';
 
-    // ----------- Адрес ----------
+
     cardAddress.textContent = data.isAddress ? data.address : '';
 
 }
