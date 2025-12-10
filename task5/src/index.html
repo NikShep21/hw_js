@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todo-container">
+
+        <header class="header">
+            <div class="header-container">
+                <h1 class="todo-name">Список задач</h1>
+                <button class="btn-add-task">
+                    <img src="./assets/group.svg" alt="add" >
+                    <p class="text-btn-add">Добавить</p>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="task-container">
+                
+            </div>
+    
+        </main>
+    </div>
+    <div class="modal-overlay">
+        <form action="#" class="modal">
+            <div class="modal-container">
+                <h2 class="modal-name">Карточка задачи</h2>
+                <div class="modal-text-task-container">
+                    
+                    <label for="modal-text-task-label">Задача</label>
+                    <input name="modal-text-task" placeholder="Описание задачи" class="modal-text-task" type="text">
+                </div>
+                <div class="checkbox-priority-container">
+                    <input name="checkbox-priority" id="checkbox-priority" class="checkbox-priority" type="checkbox">
+                    <label class="checkbox-priority-label" for="checkbox-priority">Высокий приоритет</label>
+                    <img src="./assets/hiprio.svg" alt="">
+                </div>
+                <div class="modal-btn-container">
+                    <button class="modal-btn-save">Сохранить</button>
+                    <button type="button" class="modal-btn-cancel">Отменить</button>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>
