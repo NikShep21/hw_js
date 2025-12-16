@@ -1,6 +1,6 @@
 .board{
     display: grid;
-    grid-template-columns:repeat(10, 40px);
+ 
     gap: 8px;
     width: max-content;
     margin: 0 auto;
@@ -17,8 +17,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#707070
+    color:#707070;
+    transition: all 0.15s;
+    cursor: pointer;
 
+}
+.cell:hover{
+    opacity: 0.7;
 }
 .open{
     background-color: white ;
