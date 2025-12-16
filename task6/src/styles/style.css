@@ -32,6 +32,11 @@
     background-color: #C42828;
 
 }
+
+.cell.focus {
+  outline: 2px solid #4a90e2;
+}
+
 .flag{
 
     background-color: white;
